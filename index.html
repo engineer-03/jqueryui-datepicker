@@ -1,0 +1,236 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>jQuery UI Datepicker</title>
+    <link href="css/base/jquery-ui.min.css" rel="stylesheet">
+    <style>
+        button.ui-datepicker-current {
+            display: none;
+        }
+
+        .view-source a {
+            color: lightblue;
+            cursor: pointer;
+        }
+
+        .view-source > div {
+            overflow: hidden;
+            display: none;
+        }
+
+            .view-source > div > pre {
+                background: #f9f9f9;
+                font-family: Consolas;
+                font-size: 17px;
+            }
+    </style>
+</head>
+<body>
+    <h2>基本</h2>
+    <input type="text" id="datepicker1">
+    <div class="view-source">
+        <a>view source</a>
+        <div>
+            <pre><span style="color: blue;">&lt;</span><span style="color: maroon;">!doctype</span>&nbsp;<span style="color: red;">html</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;</span><span style="color: maroon;">html</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;</span><span style="color: maroon;">head</span><span style="color: blue;">&gt;</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue;">&lt;</span><span style="color: maroon;">link</span>&nbsp;<span style="color: red;">href</span><span style="color: blue;">=</span><span style="color: blue;">"css/base/jquery-ui.min.css"</span>&nbsp;<span style="color: red;">rel</span><span style="color: blue;">=</span><span style="color: blue;">"stylesheet"</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;/</span><span style="color: maroon;">head</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;</span><span style="color: maroon;">body</span><span style="color: blue;">&gt;</span>	
+<span style="color: blue;">&lt;</span><span style="color: maroon;">input</span>&nbsp;<span style="color: red;">type</span><span style="color: blue;">=</span><span style="color: blue;">"text"</span>&nbsp;<span style="color: red;">class</span><span style="color: blue;">=</span><span style="color: blue;">"datepicker"</span><span style="color: blue;">&gt;</span>	
+<span style="color: blue;">&lt;/</span><span style="color: maroon;">body</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;</span><span style="color: maroon;">script</span>&nbsp;<span style="color: red;">src</span><span style="color: blue;">=</span><span style="color: blue;">"https://code.jquery.com/jquery-1.11.3.js"</span><span style="color: blue;">&gt;&lt;/</span><span style="color: maroon;">script</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;</span><span style="color: maroon;">script</span>&nbsp;<span style="color: red;">src</span><span style="color: blue;">=</span><span style="color: blue;">"js/jquery-ui.min.js"</span><span style="color: blue;">&gt;&lt;/</span><span style="color: maroon;">script</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;</span><span style="color: maroon;">script</span>&nbsp;<span style="color: red;">src</span><span style="color: blue;">=</span><span style="color: blue;">"js/jquery.ui.datepicker-zh-TW.js"</span><span style="color: blue;">&gt;&lt;/</span><span style="color: maroon;">script</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;</span><span style="color: maroon;">script</span><span style="color: blue;">&gt;</span>
+&nbsp;&nbsp;&nbsp;&nbsp;$(<span style="color: blue;">function</span>&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(<span style="color: #a31515;">'.</span><span style="color: magenta;">datepicker</span><span style="color: #a31515;">'</span>).datepicker();
+&nbsp;&nbsp;&nbsp;&nbsp;});
+<span style="color: blue;">&lt;/</span><span style="color: maroon;">script</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;/</span><span style="color: maroon;">html</span><span style="color: blue;">&gt;</span></pre>
+        </div>
+    </div>
+    <hr>
+    <h2>顯示年份及月份</h2>
+    <input type="text" id="datepicker2">
+    <div class="view-source">
+        <a>view source</a>
+        <div>
+            <pre><span style="color: blue;">&lt;</span><span style="color: maroon;">!doctype</span>&nbsp;<span style="color: red;">html</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;</span><span style="color: maroon;">html</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;</span><span style="color: maroon;">head</span><span style="color: blue;">&gt;</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue;">&lt;</span><span style="color: maroon;">link</span>&nbsp;<span style="color: red;">href</span><span style="color: blue;">=</span><span style="color: blue;">"css/base/jquery-ui.min.css"</span>&nbsp;<span style="color: red;">rel</span><span style="color: blue;">=</span><span style="color: blue;">"stylesheet"</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;/</span><span style="color: maroon;">head</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;</span><span style="color: maroon;">body</span><span style="color: blue;">&gt;</span>	
+<span style="color: blue;">&lt;</span><span style="color: maroon;">input</span>&nbsp;<span style="color: red;">type</span><span style="color: blue;">=</span><span style="color: blue;">"text"</span>&nbsp;<span style="color: red;">class</span><span style="color: blue;">=</span><span style="color: blue;">"datepicker"</span><span style="color: blue;">&gt;</span>	
+<span style="color: blue;">&lt;/</span><span style="color: maroon;">body</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;</span><span style="color: maroon;">script</span>&nbsp;<span style="color: red;">src</span><span style="color: blue;">=</span><span style="color: blue;">"https://code.jquery.com/jquery-1.11.3.js"</span><span style="color: blue;">&gt;&lt;/</span><span style="color: maroon;">script</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;</span><span style="color: maroon;">script</span>&nbsp;<span style="color: red;">src</span><span style="color: blue;">=</span><span style="color: blue;">"js/jquery-ui.min.js"</span><span style="color: blue;">&gt;&lt;/</span><span style="color: maroon;">script</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;</span><span style="color: maroon;">script</span>&nbsp;<span style="color: red;">src</span><span style="color: blue;">=</span><span style="color: blue;">"js/jquery.ui.datepicker-zh-TW.js"</span><span style="color: blue;">&gt;&lt;/</span><span style="color: maroon;">script</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;</span><span style="color: maroon;">script</span><span style="color: blue;">&gt;</span>
+&nbsp;&nbsp;&nbsp;&nbsp;$(<span style="color: blue;">function</span>&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(<span style="color: #a31515;">'.</span><span style="color: magenta;">datepicker</span><span style="color: #a31515;">'</span>).datepicker({
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;changeMonth:&nbsp;<span style="color: blue;">true</span>,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;changeYear:&nbsp;<span style="color: blue;">true</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});
+&nbsp;&nbsp;&nbsp;&nbsp;});
+<span style="color: blue;">&lt;/</span><span style="color: maroon;">script</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;/</span><span style="color: maroon;">html</span><span style="color: blue;">&gt;</span></pre>
+        </div>
+    </div>
+    <hr>
+    <h2>icon 按鈕觸發</h2>
+    <input type="text" id="datepicker3">
+    <div class="view-source">
+        <a>view source</a>
+        <div>
+            <pre><span style="color: blue;">&lt;</span><span style="color: maroon;">!doctype</span>&nbsp;<span style="color: red;">html</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;</span><span style="color: maroon;">html</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;</span><span style="color: maroon;">head</span><span style="color: blue;">&gt;</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue;">&lt;</span><span style="color: maroon;">link</span>&nbsp;<span style="color: red;">href</span><span style="color: blue;">=</span><span style="color: blue;">"css/base/jquery-ui.min.css"</span>&nbsp;<span style="color: red;">rel</span><span style="color: blue;">=</span><span style="color: blue;">"stylesheet"</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;/</span><span style="color: maroon;">head</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;</span><span style="color: maroon;">body</span><span style="color: blue;">&gt;</span>	
+<span style="color: blue;">&lt;</span><span style="color: maroon;">input</span>&nbsp;<span style="color: red;">type</span><span style="color: blue;">=</span><span style="color: blue;">"text"</span>&nbsp;<span style="color: red;">class</span><span style="color: blue;">=</span><span style="color: blue;">"datepicker"</span><span style="color: blue;">&gt;</span>	
+<span style="color: blue;">&lt;/</span><span style="color: maroon;">body</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;</span><span style="color: maroon;">script</span>&nbsp;<span style="color: red;">src</span><span style="color: blue;">=</span><span style="color: blue;">"https://code.jquery.com/jquery-1.11.3.js"</span><span style="color: blue;">&gt;&lt;/</span><span style="color: maroon;">script</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;</span><span style="color: maroon;">script</span>&nbsp;<span style="color: red;">src</span><span style="color: blue;">=</span><span style="color: blue;">"js/jquery-ui.min.js"</span><span style="color: blue;">&gt;&lt;/</span><span style="color: maroon;">script</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;</span><span style="color: maroon;">script</span>&nbsp;<span style="color: red;">src</span><span style="color: blue;">=</span><span style="color: blue;">"js/jquery.ui.datepicker-zh-TW.js"</span><span style="color: blue;">&gt;&lt;/</span><span style="color: maroon;">script</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;</span><span style="color: maroon;">script</span><span style="color: blue;">&gt;</span>
+&nbsp;&nbsp;&nbsp;&nbsp;$(<span style="color: blue;">function</span>&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(<span style="color: #a31515;">'.</span><span style="color: magenta;">datepicker</span><span style="color: #a31515;">'</span>).datepicker({
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;showOn:&nbsp;<span style="color: #a31515;">"button"</span>,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;buttonImage:&nbsp;<span style="color: #a31515;">"images/calendar.gif"</span>,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;buttonImageOnly:&nbsp;<span style="color: blue;">true</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});
+&nbsp;&nbsp;&nbsp;&nbsp;});
+<span style="color: blue;">&lt;/</span><span style="color: maroon;">script</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;/</span><span style="color: maroon;">html</span><span style="color: blue;">&gt;</span></pre>
+        </div>
+    </div>
+    <hr>
+    <h2>icon 按鈕及輸入框觸發</h2>
+    <input type="text" id="datepicker4">
+    <div class="view-source">
+        <a>view source</a>
+        <div>
+            <pre><span style="color: blue;">&lt;</span><span style="color: maroon;">!doctype</span>&nbsp;<span style="color: red;">html</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;</span><span style="color: maroon;">html</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;</span><span style="color: maroon;">head</span><span style="color: blue;">&gt;</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue;">&lt;</span><span style="color: maroon;">link</span>&nbsp;<span style="color: red;">href</span><span style="color: blue;">=</span><span style="color: blue;">"css/base/jquery-ui.min.css"</span>&nbsp;<span style="color: red;">rel</span><span style="color: blue;">=</span><span style="color: blue;">"stylesheet"</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;/</span><span style="color: maroon;">head</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;</span><span style="color: maroon;">body</span><span style="color: blue;">&gt;</span>	
+<span style="color: blue;">&lt;</span><span style="color: maroon;">input</span>&nbsp;<span style="color: red;">type</span><span style="color: blue;">=</span><span style="color: blue;">"text"</span>&nbsp;<span style="color: red;">class</span><span style="color: blue;">=</span><span style="color: blue;">"datepicker"</span><span style="color: blue;">&gt;</span>	
+<span style="color: blue;">&lt;/</span><span style="color: maroon;">body</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;</span><span style="color: maroon;">script</span>&nbsp;<span style="color: red;">src</span><span style="color: blue;">=</span><span style="color: blue;">"https://code.jquery.com/jquery-1.11.3.js"</span><span style="color: blue;">&gt;&lt;/</span><span style="color: maroon;">script</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;</span><span style="color: maroon;">script</span>&nbsp;<span style="color: red;">src</span><span style="color: blue;">=</span><span style="color: blue;">"js/jquery-ui.min.js"</span><span style="color: blue;">&gt;&lt;/</span><span style="color: maroon;">script</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;</span><span style="color: maroon;">script</span>&nbsp;<span style="color: red;">src</span><span style="color: blue;">=</span><span style="color: blue;">"js/jquery.ui.datepicker-zh-TW.js"</span><span style="color: blue;">&gt;&lt;/</span><span style="color: maroon;">script</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;</span><span style="color: maroon;">script</span><span style="color: blue;">&gt;</span>
+&nbsp;&nbsp;&nbsp;&nbsp;$(<span style="color: blue;">function</span>&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(<span style="color: #a31515;">'.</span><span style="color: magenta;">datepicker</span><span style="color: #a31515;">'</span>).datepicker({
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;showOn:&nbsp;<span style="color: #a31515;">"both"</span>,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;buttonImage:&nbsp;<span style="color: #a31515;">"images/calendar.gif"</span>,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;buttonImageOnly:&nbsp;<span style="color: blue;">true</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});
+&nbsp;&nbsp;&nbsp;&nbsp;});
+<span style="color: blue;">&lt;/</span><span style="color: maroon;">script</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;/</span><span style="color: maroon;">html</span><span style="color: blue;">&gt;</span></pre>
+        </div>
+    </div>
+    <hr>
+    <h2>輸入框readonly及清除鈕</h2>
+    <input type="text" id="datepicker5" readonly="readonly">
+    <div class="view-source">
+        <a>view source</a>
+        <div>
+            <pre><span style="color: blue;">&lt;</span><span style="color: maroon;">!doctype</span>&nbsp;<span style="color: red;">html</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;</span><span style="color: maroon;">html</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;</span><span style="color: maroon;">head</span><span style="color: blue;">&gt;</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue;">&lt;</span><span style="color: maroon;">link</span>&nbsp;<span style="color: red;">href</span><span style="color: blue;">=</span><span style="color: blue;">"css/base/jquery-ui.min.css"</span>&nbsp;<span style="color: red;">rel</span><span style="color: blue;">=</span><span style="color: blue;">"stylesheet"</span><span style="color: blue;">&gt;</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue;">&lt;</span><span style="color: maroon;">style</span><span style="color: blue;">&gt;</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: maroon;">button.ui-datepicker-current</span>&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: red;">display</span>:&nbsp;<span style="color: blue;">none</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue;">&lt;/</span><span style="color: maroon;">style</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;/</span><span style="color: maroon;">head</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;</span><span style="color: maroon;">body</span><span style="color: blue;">&gt;</span>	
+<span style="color: blue;">&lt;</span><span style="color: maroon;">input</span>&nbsp;<span style="color: red;">type</span><span style="color: blue;">=</span><span style="color: blue;">"text"</span>&nbsp;<span style="color: red;">class</span><span style="color: blue;">=</span><span style="color: blue;">"datepicker"</span><span style="color: blue;">&gt;</span>	
+<span style="color: blue;">&lt;/</span><span style="color: maroon;">body</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;</span><span style="color: maroon;">script</span>&nbsp;<span style="color: red;">src</span><span style="color: blue;">=</span><span style="color: blue;">"https://code.jquery.com/jquery-1.11.3.js"</span><span style="color: blue;">&gt;&lt;/</span><span style="color: maroon;">script</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;</span><span style="color: maroon;">script</span>&nbsp;<span style="color: red;">src</span><span style="color: blue;">=</span><span style="color: blue;">"js/jquery-ui.min.js"</span><span style="color: blue;">&gt;&lt;/</span><span style="color: maroon;">script</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;</span><span style="color: maroon;">script</span>&nbsp;<span style="color: red;">src</span><span style="color: blue;">=</span><span style="color: blue;">"js/jquery.ui.datepicker-zh-TW.js"</span><span style="color: blue;">&gt;&lt;/</span><span style="color: maroon;">script</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;</span><span style="color: maroon;">script</span><span style="color: blue;">&gt;</span>
+&nbsp;&nbsp;&nbsp;&nbsp;$(<span style="color: blue;">function</span>&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue;">var</span>&nbsp;originalPicker&nbsp;=&nbsp;$.datepicker._generateHTML;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$.datepicker._generateHTML&nbsp;=&nbsp;<span style="color: blue;">function</span>&nbsp;(inst)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue;">var</span>&nbsp;$picker&nbsp;=&nbsp;$(originalPicker.call($.datepicker,&nbsp;inst));&nbsp;<span style="color: green;">//call&nbsp;the&nbsp;original</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$picker&nbsp;=&nbsp;$(<span style="color: #a31515;">'&lt;div&gt;'</span>).append($picker);&nbsp;<span style="color: green;">//add&nbsp;a&nbsp;wrapper&nbsp;div&nbsp;for&nbsp;jQuery&nbsp;context</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(<span style="color: #a31515;">'.ui-datepicker-buttonpane'</span>,&nbsp;$picker).append(
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(<span style="color: #a31515;">'&lt;button&nbsp;class="ui-datepicker-clear&nbsp;ui-state-default&nbsp;ui-priority-primary&nbsp;ui-corner-all"&gt;'</span>&nbsp;+&nbsp;(<span style="color: blue;">this</span>._get(inst,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a31515;">'clear'</span>)&nbsp;===&nbsp;undefined&nbsp;?&nbsp;<span style="color: #a31515;">'Clear'</span>&nbsp;:&nbsp;<span style="color: blue;">this</span>._get(inst,&nbsp;<span style="color: #a31515;">'clear'</span>))&nbsp;+&nbsp;<span style="color: #a31515;">'&lt;/button&gt;'</span>)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.click(<span style="color: blue;">function</span>&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inst.input.val(<span style="color: #a31515;">''</span>).datepicker(<span style="color: #a31515;">'hide'</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;})
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;);
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue;">return</span>&nbsp;$picker.children();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(<span style="color: #a31515;">'.</span><span style="color: magenta;">datepicker</span><span style="color: #a31515;">'</span>).datepicker({
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;showButtonPanel:&nbsp;<span style="color: blue;">true</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}).find(<span style="color: #a31515;">".</span><span style="color: magenta;">ui-datepicker-current</span><span style="color: #a31515;">"</span>).hide();
+&nbsp;&nbsp;&nbsp;&nbsp;});
+<span style="color: blue;">&lt;/</span><span style="color: maroon;">script</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;/</span><span style="color: maroon;">html</span><span style="color: blue;">&gt;</span></pre>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.ui.datepicker-zh-TW.js"></script>
+<script>
+    $(function () {
+        $("#datepicker1").datepicker();
+        $("#datepicker2").datepicker({
+            changeMonth: true,
+            changeYear: true
+        });
+        $("#datepicker3").datepicker({
+            showOn: "button",
+            buttonImage: "images/calendar.gif",
+            buttonImageOnly: true
+        });
+        $("#datepicker4").datepicker({
+            showOn: "both",
+            buttonImage: "images/calendar.gif",
+            buttonImageOnly: true
+        });
+
+        var originalPicker = $.datepicker._generateHTML;
+        $.datepicker._generateHTML = function (inst) {
+            var $picker = $(originalPicker.call($.datepicker, inst)); //call the original
+            $picker = $('<div>').append($picker); //add a wrapper div for jQuery context
+            $('.ui-datepicker-buttonpane', $picker).append(
+                $('<button class="ui-datepicker-clear ui-state-default ui-priority-primary ui-corner-all">' + (this._get(inst,
+                    'clear') === undefined ? 'Clear' : this._get(inst, 'clear')) + '</button>')
+                    .click(function () {
+                        inst.input.val('').datepicker('hide');
+                    })
+            );
+
+            return $picker.children();
+        };
+
+        $("#datepicker5").datepicker({
+            showButtonPanel: true
+        }).find(".ui-datepicker-current").hide();
+
+        $(".view-source a").on("click", function () {
+            $(this).parent().find('div').animate({
+                opacity: "toggle",
+                height: "toggle"
+            });
+        });
+    });
+</script>
+</html>
